@@ -1,0 +1,113 @@
+:root{
+    --my-image:url(./img-types/pokeball.webp);
+    --my-image-two:url(./img-types/pokeball.webp);
+}
+
+.header{
+    color: white;
+    font-family: 'Pokemon Solid', sans-serif;
+    padding: 20px;
+    margin-bottom: 90px;
+                                                
+}
+
+h1, h3, h5{
+    mix-blend-mode: difference;
+    z-index: 50;
+}
+
+h5{
+  font-size: 1.75rem;
+}
+
+body{
+    position: relative;
+    background-image: url(./img-types/pokeball.webp);
+    background-size:cover;
+
+}
+
+#pokeball{
+  background: none;
+  border: 0;
+}
+
+.wiggle:hover{
+  animation-name: wiggle;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+/*@keyframes back {
+    /*from {background-color: var(--my-color-two);}
+    to {background-color: var(--my-color);}
+    from {background-image: var(--my-image-two);background-size: cover;}
+    to {background-image: var(--my-image);background-size:cover;}
+
+  }*/
+
+  .center{
+    height: 10rem;
+  }
+
+  .top{
+    height: 50%;
+  }
+
+  .bottom{
+    height: 20rem;
+  }
+
+  img{
+    width:100%;
+    height:auto;
+  }
+
+  .pok-name{
+    font-family: 'Pokemon Solid', sans-serif;
+  }
+
+  .myimg{
+    width:200px;
+    height:200px;
+    
+  }
+
+
+@keyframes wiggle {
+  20% {transform: rotate(17deg);}
+  40% {transform: rotate(-7deg);}
+  60% {transform: rotate(4deg);}
+  80% {transform: rotate(-2deg);}
+  100% {transform: rotate(0deg);}
+}
+
+  
+.one, .two {
+  position: absolute;
+  height: 100%;
+  width: 80%;
+
+}
+.one {
+  left: 0;
+  top: 0;
+  background-image: var(--my-image);
+  transform:scaleX(-1);
+  z-index:-99;
+  background-size: cover;
+  clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+.two {
+  right: 0;
+  top: 0;
+  z-index:-105;
+  background-image:var(--my-image-two);
+  background-size: cover;
+  clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%); 
+}
+
+
+  
